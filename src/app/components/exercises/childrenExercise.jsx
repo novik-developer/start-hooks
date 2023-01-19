@@ -1,5 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import CollapseWrapper from "../common/collapse";
+
+const ChildrenIndex = ({ children }) => {
+    return React.Children.map(children, (child, index) => {
+        console.log(child, index);
+        return (
+            <div className="d-flex">
+                <code>{index}</code>
+                <div className="mx-1">{child}</div>
+            </div>
+        );
+    });
+};
+
+ChildrenIndex.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ])
+};
+
 const ChildrenExercise = () => {
     return (
         <CollapseWrapper title="Упражнение">
@@ -10,10 +32,11 @@ const ChildrenExercise = () => {
                 <code>React.Children.map</code> так и{" "}
                 <code>React.Children.toArray</code>
             </p>
-
-            <Component />
-            <Component />
-            <Component />
+            <ChildrenIndex>
+                <Component />
+                <Component />
+                <Component />
+            </ChildrenIndex>
         </CollapseWrapper>
     );
 };
