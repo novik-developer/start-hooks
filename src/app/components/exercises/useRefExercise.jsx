@@ -21,6 +21,8 @@ const UseRefExercise = () => {
             >
                 <small>Блок</small>
             </div>
+
+            <button />
         </CollapseWrapper>
     );
 };
