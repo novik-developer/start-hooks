@@ -20,9 +20,8 @@ const UseRefExercise = () => {
                 }}
             >
                 <small>Блок</small>
+                <small>Блок2</small>
             </div>
-
-            <button />
         </CollapseWrapper>
     );
 };
