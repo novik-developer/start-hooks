@@ -35,7 +35,7 @@ FormComponent.propTypes = {
 const ReactChildrenExample = () => {
     return (
         <CardWrapper>
-            <SmallTitle>Clone form and add props!</SmallTitle>
+            <SmallTitle>Clone form and add props!!!</SmallTitle>
             <Divider />
             <FormComponent>
                 <TextField name="email" label="email" />
